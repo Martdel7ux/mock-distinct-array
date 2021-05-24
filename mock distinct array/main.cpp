@@ -2,13 +2,35 @@
 //  main.cpp
 //  mock distinct array
 //
-//  Created by MARTIN on 22/05/2021.
+//  Created by MARTIN on 21/05/2021.
 //
 
 #include <iostream>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+using namespace std;
+
+int main() {
+  int array[10];
+
+  cout << "Enter ten numbers: ";
+
+  for(int i = 0; i < 10; i++)
+    cin >> array[i];
+
+  cout << "The distinct numbers are: ";
+
+  for(int i = 0; i < 10; i++){
+    int j;
+    for(j = 0; j < i; j++){
+      if(array[i] == array[j])
+        break;
+    }
+      if(i == j)
+        cout << array[i] << " ";
+
+  }
+
+
+  return 0;
 }
+
